@@ -1,0 +1,112 @@
+// Import and Variables
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap");
+
+// font-family: "Roboto", sans-serif;
+// font-family: "Shrikhand", cursive;
+
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$footer-color: #353535;
+$light-bg-color: #f6f6f6;
+$direction: row;
+
+@mixin center-flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+// Utilities
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Base Styles
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 100;
+  padding: 1rem 0 1.5rem;
+}
+
+.card:hover {
+  background: $secondary-color;
+}
+// Header
+header {
+  @include center-flex(row);
+  padding: 40px 0 20px;
+}
+
+// Locate
+.locate {
+  height: 4rem;
+  background: linear-gradient(#c9c6c6, #eaeaea);
+  border-top: 3px solid #c1c1c1;
+  @include center-flex(row);
+  gap: 20px;
+}
+
+// CTA
+#cta {
+  @include center-flex(column);
+  background: $light-bg-color;
+  gap: 20px;
+  padding: 50px;
+}
+
+// Fonctionnement
+#fonctionnement {
+  background: #fff;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+  }
+  li {
+    display: flex;
+    width: calc(100% - 40px);
+    max-width: 700px;
+    gap: 20px;
+    background: $light-bg-color;
+    padding: 30px 50px;
+    border-radius: 20px;
+    i {
+      flex-basis: 20px;
+    }
+    div {
+      flex-basis: 300px;
+    }
+  }
+}
+
+// Footer
+footer {
+  padding: 20px;
+  background-color: $footer-color;
+  color: #fff;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
