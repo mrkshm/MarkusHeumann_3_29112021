@@ -35,17 +35,92 @@
     <section id="fonctionnement">
       <h2>Fonctionnement</h2>
       <div class="steps">
-        <div class="card">
+        <div class="step step-1">
           <i class="fa-solid fa-mobile-screen-button"></i>
-          <div class="card">Choisissez un restaurant</div>
+          <div class="instruction">Choisissez un restaurant</div>
         </div>
-        <div class="card">
+        <div class="step step-2">
           <i class="fa-solid fa-list"></i>
-          <div>Composez votre menu</div>
+          <div class="instruction">Composez votre menu</div>
         </div>
-        <div class="card">
+        <div class="step step-3">
           <i class="fa-solid fa-store"></i>
-          <div>Dégustez au restaurant</div>
+          <div class="instruction">Dégustez au restaurant</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurants -->
+    <section id="restaurants">
+      <h2>Restaurants</h2>
+      <div class="restaurants-flex">
+        <div class="restaurant nouveau">
+          <img
+            src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="Jays Restaurant"
+          />
+          <div class="restaurant-flex">
+            <div class="name-location">
+              <h4>La palette du goût</h4>
+              <p>Ménilmontant</p>
+            </div>
+            <div class="heart">
+              <input type="checkbox" class="check check-1" />
+              <div class="heart-full"><i class="fa-solid fa-heart"></i></div>
+              <div class="heart-empty"><i class="fa-regular fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="restaurant nouveau">
+          <img
+            src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+            alt="Jays Restaurant"
+          />
+          <div class="restaurant-flex">
+            <div class="name-location">
+              <h4>La note enchantée</h4>
+              <p>Charonne</p>
+            </div>
+            <div class="heart">
+              <input type="checkbox" class="check check-1" />
+              <div class="heart-full"><i class="fa-solid fa-heart"></i></div>
+              <div class="heart-empty"><i class="fa-regular fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="restaurant">
+          <img
+            src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="Jays Restaurant"
+          />
+          <div class="restaurant-flex">
+            <div class="name-location">
+              <h4>À la française</h4>
+              <p>Cité Rouge</p>
+            </div>
+            <div class="heart">
+              <input type="checkbox" class="check check-1" />
+              <div class="heart-full"><i class="fa-solid fa-heart"></i></div>
+              <div class="heart-empty"><i class="fa-regular fa-heart"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="restaurant">
+          <img
+            src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+            alt="Jays Restaurant"
+          />
+          <div class="restaurant-flex">
+            <div class="name-location">
+              <h4>Le délice des sens</h4>
+              <p>Folie-Méricourt</p>
+            </div>
+            <div class="heart">
+              <input type="checkbox" class="check check-1" />
+              <div class="heart-full"><i class="fa-solid fa-heart"></i></div>
+              <div class="heart-empty"><i class="fa-regular fa-heart"></i></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -55,11 +130,18 @@
       <h3>ohmyfood</h3>
       <ul>
         <li>
-          <i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Proposer un restaurant
+          <a href="#">
+            <i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Proposer un
+            restaurant</a
+          >
         </li>
-        <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a
+          >
+        </li>
+        <li><a href="#"> Mentions légales</a></li>
+        <li><a href="mailto:john@doe.com"> Contact</a></li>
       </ul>
     </footer>
   </body>
