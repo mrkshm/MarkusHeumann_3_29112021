@@ -290,6 +290,18 @@ footer ul li:last-child {
   opacity: 0;
   width: 100%;
 }
+.restaurant-photo.delice-photo {
+  background: url("/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") center center/cover;
+}
+.restaurant-photo.lanote-photo {
+  background: url("../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") center center/cover;
+}
+.restaurant-photo.francaise-photo {
+  background: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center center/cover;
+}
+.restaurant-photo.palette-photo {
+  background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") center center/cover;
+}
 
 .menu {
   padding: 10px;
@@ -381,6 +393,28 @@ footer ul li:last-child {
   width: calc(100% - 130px);
 }
 
+.dish-title-flex:hover > .dish-title + .dish-price + .slide > i {
+  -webkit-animation: spinner 0.8s;
+          animation: spinner 0.8s;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
 .peek {
   -webkit-animation: peekaboo;
           animation: peekaboo;
@@ -503,9 +537,9 @@ footer ul li:last-child {
 
 .slide {
   background: #99e2d0;
-  border-radius: 0 20px 20px 0;
   font-size: 20px;
-  padding: 20px;
+  padding: 20px 30px 20px 20px;
+  width: 200px;
   height: 100%;
 }
 .slide:hover {
