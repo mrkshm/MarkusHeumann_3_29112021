@@ -44,6 +44,105 @@ a {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  position: relative;
+  color: #333;
+}
+.load-animation {
+  content: "";
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+  opacity: 1;
+  animation: load-animation 0s 3s forwards;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+}
+svg {
+  width: 90%;
+  fill: none;
+}
+
+.load {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 570;
+  stroke-width: 20px;
+  &.one {
+    stroke: $primary-color;
+    animation: load 1.5s infinite;
+  }
+  &.two {
+    stroke: $tertiary-color;
+    animation: load 1.5s infinite;
+    animation-delay: 0.1s;
+  }
+  &.three {
+    stroke: $secondary-color;
+    animation: load 1.5s infinite;
+    animation-delay: 0.2s;
+  }
+}
+
+.point {
+  animation: bounce 1s infinite ease-in-out;
+  &.one {
+    fill: $secondary-color;
+    animation-delay: 0s;
+  }
+  &.two {
+    fill: $tertiary-color;
+    animation-delay: 0.1s;
+  }
+  &.three {
+    fill: $primary-color;
+    animation-delay: 0.2s;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 570;
+  }
+  50% {
+    stroke-dashoffset: 530;
+  }
+  100% {
+    stroke-dashoffset: 570;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load-animation {
+  1% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
 }
 
 h1 {
@@ -126,6 +225,9 @@ header {
 
     &:hover {
       opacity: 0.8;
+    }
+    a {
+      color: inherit;
     }
   }
 }
@@ -458,6 +560,9 @@ $dish-color: #99e2d0;
   animation-fill-mode: forwards;
 }
 
+// --------------------
+// DELAY DURATION
+// --------------------
 .del1 {
   animation-delay: 0.1s;
 }
