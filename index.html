@@ -12,10 +12,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/tablet.css">
     <title>ohmyfood - Home</title>
   </head>
   <body>
-    <div class="load-animation">
+    <div class="max-container">
+    <!-- <div class="load-animation">
       <div class="loader">
         <svg
           viewBox="0 0 120 120"
@@ -32,9 +34,12 @@
           </g>
         </svg>
       </div>
-    </div>
+    </div> -->
     <!-- Header -->
-    <header><img src="./img/logo/ohmyfood@2x.svg" alt="" /></header>
+    <header>
+      <!-- Empty div for grid -->
+      <div></div>
+      <img src="./img/logo/ohmyfood@2x.svg" alt="" /></header>
 
     <!-- Locate -->
     <section id="locate" class="locate">
@@ -43,6 +48,7 @@
     </section>
 
     <!-- CTA -->
+    <div class="gridder">
     <section id="cta">
       <h1>Réservez le menu qui vous convient</h1>
       <p>Découvrez des restaurants d'exception, séléctionnés pas nos soins.</p>
@@ -69,6 +75,7 @@
         </div>
       </div>
     </section>
+    </div>
 
     <!-- Restaurants -->
     <section id="restaurants">
@@ -193,5 +200,6 @@
         <li><a href="mailto:john@doe.com"> Contact</a></li>
       </ul>
     </footer>
+  </div>
   </body>
 </html>

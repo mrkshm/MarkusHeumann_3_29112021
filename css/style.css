@@ -15,6 +15,13 @@ body {
   font-size: 1rem;
   position: relative;
   color: #333;
+  background-color: #333;
+}
+
+.max-container {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
 }
 
 .load-animation {
@@ -180,21 +187,22 @@ h3 {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  padding: 30px 20px;
+  justify-items: center;
+  gap: 10px;
 }
 header img {
-  width: calc(100vw - 50%);
-  position: relative;
-  max-width: 400px;
+  width: 100%;
+  max-width: 300px;
+  justify-self: center;
 }
 header .arrow {
   font-size: 22px;
-  position: absolute;
+  justify-self: start;
   left: 20px;
+  padding-top: 10px;
 }
 
 .locate {
@@ -523,6 +531,7 @@ footer ul li:last-child {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 500px;
 }
 
 .dish-title-flex {
@@ -538,6 +547,18 @@ footer ul li:last-child {
   width: calc(100% - 130px);
 }
 
+@media (max-width: 320px) {
+  .title-flex {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .title-flex .heart {
+    left: 10%;
+    padding-top: 10px;
+  }
+}
 .dish-title-flex:hover > .dish-title + .dish-price + .slide > i {
   -webkit-animation: spinner 0.8s;
           animation: spinner 0.8s;
