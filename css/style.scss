@@ -11,6 +11,7 @@ $tertiary-color: #99e2d0;
 $footer-color: #353535;
 $light-bg-color: #f6f6f6;
 $direction: row;
+// $dish-color: #99e2d0;
 
 @mixin center-flex($direction) {
   display: flex;
@@ -174,8 +175,6 @@ h3 {
 }
 // Header
 header {
-  // @include center-flex(row);
-  // padding: 30px 0 20px;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   padding: 30px 20px;
@@ -528,11 +527,10 @@ footer {
   }
 }
 
-$dish-color: #99e2d0;
 .seperator-line {
   width: 60px;
   height: 3px;
-  background-color: $dish-color;
+  background-color: $tertiary-color;
   margin: 3px 0 20px;
 }
 .dish {
@@ -668,7 +666,7 @@ $dish-color: #99e2d0;
 }
 
 .slide {
-  background: $dish-color;
+  background: $tertiary-color;
   font-size: 20px;
   padding: 20px 30px 20px 20px;
   width: 200px;
