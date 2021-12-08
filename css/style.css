@@ -202,9 +202,14 @@ header .arrow {
   font-size: 22px;
   justify-self: start;
   left: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
+@media (max-width: 320px) {
+  header .arrow {
+    padding-top: 2px;
+  }
+}
 .locate {
   height: 4rem;
   background: linear-gradient(#d8d8d8, #eaeaea);
@@ -530,6 +535,7 @@ footer ul li:last-child {
 .dish {
   display: flex;
   flex-direction: column;
+  margin: auto;
   gap: 10px;
   max-width: 500px;
 }
