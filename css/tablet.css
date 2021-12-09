@@ -30,10 +30,6 @@ header .arrow {
   padding: 5px 20px;
 }
 
-.dish {
-  margin: unset;
-}
-
 .course-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -85,4 +81,4 @@ header .arrow {
 }
 .menu .title-flex {
   margin-bottom: 20px;
-} /*# sourceMappingURL=tablet.css.map */
+}/*# sourceMappingURL=tablet.css.map */
