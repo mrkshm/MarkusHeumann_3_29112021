@@ -7,7 +7,7 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: #333;
 }
 
 body {
@@ -25,7 +25,6 @@ body {
 }
 
 .load-animation {
-  content: "";
   position: fixed;
   overflow: hidden;
   display: flex;
@@ -320,6 +319,15 @@ header .arrow {
   content: "3";
 }
 
+@media (max-width: 320px) {
+  #fonctionnement .steps .step {
+    padding: 25px 10px 25px 25px;
+  }
+  #fonctionnement .steps .step .instruction {
+    padding-top: 2px;
+    font-size: 0.95rem;
+  }
+}
 #restaurants {
   position: relative;
   background: #f6f6f6;

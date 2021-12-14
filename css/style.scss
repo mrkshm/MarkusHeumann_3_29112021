@@ -38,7 +38,7 @@ $direction: row;
 
 a {
   text-decoration: none;
-  color: black;
+  color: #333;
 }
 
 // Base Styles
@@ -55,7 +55,7 @@ body {
   background-color: #fff;
 }
 .load-animation {
-  content: "";
+  // content: "";
   position: fixed;
   overflow: hidden;
   display: flex;
@@ -75,6 +75,7 @@ body {
   width: 150px;
   height: 150px;
 }
+
 svg {
   width: 90%;
   fill: none;
@@ -316,6 +317,20 @@ header {
     .step-3 {
       &:before {
         content: "3";
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  #fonctionnement {
+    .steps {
+      .step {
+        padding: 25px 10px 25px 25px;
+        .instruction {
+          padding-top: 2px;
+          font-size: 0.95rem;
+        }
       }
     }
   }
