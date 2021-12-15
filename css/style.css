@@ -177,8 +177,12 @@ h3 {
   padding: 1rem 0 1.5rem;
 }
 
-.fa-solid.fa-heart {
-  color: #9356dc;
+.gradient-heart:before {
+  background: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
 }
 
 .card:hover {
@@ -324,8 +328,9 @@ header .arrow {
     padding: 25px 10px 25px 25px;
   }
   #fonctionnement .steps .step .instruction {
+    margin-left: -10px;
     padding-top: 2px;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 #restaurants {
@@ -379,6 +384,12 @@ header .arrow {
   position: relative;
   font-size: 24px;
 }
+#restaurants .restaurants-flex .restaurant .restaurant-flex .heart:hover > .heart-full {
+  opacity: 1;
+}
+#restaurants .restaurants-flex .restaurant .restaurant-flex .heart:hover > .heart-full + .heart-empty {
+  opacity: 0;
+}
 #restaurants .restaurants-flex .restaurant .restaurant-flex .heart .heart-full {
   position: absolute;
   right: 30px;
@@ -392,22 +403,6 @@ header .arrow {
   bottom: 25px;
   opacity: 1;
   transition: opacity 0.7s ease-in-out;
-}
-#restaurants .restaurants-flex .restaurant .restaurant-flex .heart .check {
-  width: 50px;
-  height: 50px;
-  z-index: 5;
-  position: absolute;
-  cursor: pointer;
-  bottom: 20px;
-  right: 2px;
-  opacity: 0;
-}
-#restaurants .restaurants-flex .restaurant .restaurant-flex .heart .check:checked + .heart-full {
-  opacity: 1;
-}
-#restaurants .restaurants-flex .restaurant .restaurant-flex .heart .check:checked ~ .heart-empty {
-  opacity: 0;
 }
 
 .nouveau::before {
@@ -491,6 +486,12 @@ footer ul li:last-child {
   font-size: 22px;
   position: relative;
 }
+.menu .title-flex .heart:hover > .heart-full {
+  opacity: 1;
+}
+.menu .title-flex .heart:hover > .heart-full + .heart-empty {
+  opacity: 0;
+}
 .menu .title-flex .heart .heart-full {
   position: absolute;
   right: 25px;
@@ -504,22 +505,6 @@ footer ul li:last-child {
   bottom: -12px;
   opacity: 1;
   transition: opacity 0.7s ease-in-out;
-}
-.menu .title-flex .heart .check {
-  position: absolute;
-  right: -5px;
-  bottom: -20px;
-  height: 50px;
-  width: 50px;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 5;
-}
-.menu .title-flex .heart .check:checked ~ .heart-empty {
-  opacity: 0;
-}
-.menu .title-flex .heart .check:checked ~ .heart-full {
-  opacity: 1;
 }
 
 .course {
@@ -598,10 +583,12 @@ footer ul li:last-child {
 .peek {
   -webkit-animation: peekaboo;
           animation: peekaboo;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .del1 {
@@ -652,18 +639,22 @@ footer ul li:last-child {
 @-webkit-keyframes peekaboo {
   from {
     opacity: 0;
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 
 @keyframes peekaboo {
   from {
     opacity: 0;
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 .dish-title {
